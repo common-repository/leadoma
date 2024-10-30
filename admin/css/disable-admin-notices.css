@@ -1,0 +1,17 @@
+.error,
+.notice,
+.updated,
+.update-nag {
+  display: none !important;
+}
+
+#wpcontent {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  background-color: #fafafa !important /*var(--bs-gray-25) */;
+}
+
+#wpbody-content,
+#wpbody {
+  background-color: #fafafa !important /*var(--bs-gray-25) */;
+}

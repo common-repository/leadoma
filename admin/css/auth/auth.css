@@ -1,0 +1,258 @@
+.leadoma {
+  /* header */
+  --auth-header-bg: #fff;
+  --auth-header-color: var(--bs-gray-600);
+  --auth-header-active-color: var(--bs-primary-700);
+
+  /* body */
+  --auth-body-bg: var(--bs-gray-50);
+
+  /* forms */
+  --auth-forms-bg: #fff;
+}
+
+body #wpbody-content,
+#wpbody,
+.leadoma {
+  background-color: #f5f5f5 !important;
+}
+
+/** auth header */
+.auth-header {
+  background-color: var(--auth-header-bg);
+  color: var(--auth-header-color);
+  font-size: 12px;
+  font-weight: bold;
+  border-bottom: 1px solid var(--bs-gray-200);
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.auth-header .auth-steps {
+  background-repeat: repeat-x;
+  background-position: center;
+  background-image: url("data:image/svg+xml,%3Csvg width='330' height='2' viewBox='0 0 330 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 1L330 0.999971' stroke='%23BFBFBF' stroke-dasharray='4 4'/%3E%3C/svg%3E%0A");
+  max-width: 500px;
+}
+
+.auth-header .fill-bg {
+  color: var(--auth-header-color);
+  background-color: var(--auth-header-bg);
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.auth-header .fill-bg.active {
+  --auth-header-color: var(--auth-header-active-color);
+}
+
+.auth-header .fill-bg svg {
+  margin-bottom: 6px;
+}
+
+/** auth body */
+.auth-body {
+  background-color: var(--auth-body-bg) !important;
+}
+
+/* welcome */
+.leadoma-welcome {
+  max-width: 656px;
+}
+
+.welcome-image-container {
+  padding-top: 126px;
+  margin-bottom: 48px;
+}
+
+.welcome-image-container img {
+  max-width: 447px;
+  width: 100%;
+}
+
+.leadoma-welcome h1 {
+  margin-bottom: 16px;
+}
+
+.leadoma-welcome p {
+  color: var(--bs-gray-400);
+  margin-bottom: 56px;
+}
+
+@media screen and (max-width: 1200px) {
+  .welcome-image-container {
+    padding-top: 62px;
+    margin-bottom: 40px;
+  }
+
+  .leadoma-welcome {
+    max-width: 70%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .welcome-image-container {
+    padding-top: 32px;
+    margin-bottom: 24px;
+  }
+
+  .leadoma-welcome {
+    max-width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .leadoma-welcome {
+    max-width: 90%;
+  }
+}
+
+/* auth nav */
+.auth-vav {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.auth-vav .auth-nav-item {
+  --auth-border: var(--bs-gray-200);
+  padding: 11px 16px 10px 16px;
+  margin-right: 1px;
+  margin-left: 1px;
+  border-bottom: 2px solid var(--auth-border);
+  color: var(--bs-gray-400);
+}
+
+.auth-vav .auth-nav-item.active {
+  --auth-border: var(--bs-primary-600);
+  color: var(--bs-gray-900);
+  font-weight: 700;
+}
+
+/* login */
+.leadoma-login {
+  max-width: 448px;
+}
+
+.login-image-container {
+  padding-top: 76px;
+  margin-bottom: 24px;
+}
+
+.login-image-container img {
+  max-width: 132px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .welcome-image-container {
+    padding-top: 64px;
+    margin-bottom: 18px;
+  }
+
+  .leadoma-welcome {
+    max-width: 70%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .login-image-container {
+    padding-top: 56px;
+    margin-bottom: 16px;
+  }
+
+  .leadoma-login {
+    max-width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .leadoma-login {
+    max-width: 90%;
+  }
+}
+
+/* verify email */
+.lm-open-gmail-button {
+  border: none;
+  background-color: #fff;
+  color: var(--bs-gray-600);
+  padding: 12px 32px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin: auto;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  outline: none
+}
+
+.lm-open-gmail-button:hover {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.lm-open-gmail-button img {
+  margin-right: 24px;
+}
+
+/* forms */
+.auth-forms {
+  background-color: var(--auth-forms-bg);
+  border-radius: 8px;
+  padding: 24px 48px;
+}
+
+/* .lm-welcome-auth {} */
+
+/* for js */
+
+.lm-welcome-auth:not(.auth-step) .show-on-auth,
+.lm-welcome-auth:not(.welcome-step) .show-on-welcome,
+.lm-welcome-auth:not(.verify-step) .show-on-verify {
+  display: none;
+}
+
+.auth-forms.login-state .show-on-signup,
+.auth-forms.login-state .show-on-reset {
+  display: none;
+}
+
+.auth-forms.signup-state .show-on-login,
+.auth-forms.signup-state .show-on-reset {
+  display: none;
+}
+
+.auth-forms.reset-state .show-on-signup,
+.auth-forms.reset-state .show-on-login {
+  display: none;
+}
+
+.auth-forms.reset-state .auth-vav {
+  display: none;
+}
+
+.leadoma-cloud-notice {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  position: absolute;
+  bottom: 8px;
+  left: -100%;
+  z-index: 10;
+  padding: 16px;
+  background: #fff;
+  animation: leadomaSlideIn 500ms forwards;
+  animation-delay: 10ms;
+}
+
+@keyframes leadomaSlideIn {
+  from {
+    left: -100%;
+  }
+
+  to {
+    left: 8px;
+  }
+}
